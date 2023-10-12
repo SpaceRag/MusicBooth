@@ -14,7 +14,7 @@ This is a simple in-browser music player mini app that allows you to play music,
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/in-browser-music-player.git
+   git clone https://github.com/SpaceRag/MusicBooth.git
 
 
 ## ScreenShot 
