@@ -1,142 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;500;700&family=Rubik:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;500;700&family=Rubik:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 
-html{
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.background{
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    z-index: -1;
+.background {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
 }
 
-.background img{
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    min-width: 50%;
-    min-height: 50%;
-    filter: blur(15px);
-    -webkit-filter: blur(50px);
-    transform: scale(1.1);
+.background img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-width: 50%;
+  min-height: 50%;
+  filter: blur(15px);
+  -webkit-filter: blur(50px);
+  transform: scale(1.1);
 }
 
-.container{
-    background-color: #385c40be;
-    height: 500px;
-    width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+.container {
+  background-color: #385c4062;
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  border: solid 2px rgba(255, 255, 255, 0.116);
+  box-shadow: 0 15px 30px rgba(32, 32, 32, 0.3);
 }
 
-.container:hover{
-    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+.container:hover {
+  box-shadow: 0 15px 30px rgba(32, 32, 32, 0.404);
+  transition: all 0.5s;
 }
 
-.player-img{
-    width: 300px;
-    height: 300px;
-    position: relative;
-    top: -50px;
-    left: 50px;
+.player-img {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: -50px;
+  left: 50px;
 }
 
-.player-img img{
-    object-fit: cover;
-    border-radius: 20px;
-    height: 0;
-    width: 0;
-    opacity: 0;
-    box-shadow: 0 5px 30px 5px rgba(0,0,0,0.5);
+.player-img img {
+  object-fit: cover;
+  border-radius: 20px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  box-shadow: 0 5px 30px 5px rgba(199, 199, 199, 0.5);
 }
 
-.player-img:hover img{
-    box-shadow: 0 5px 30px 5px rgba(0,0,0,0.8);
+.player-img:hover img {
+  box-shadow: 0 5px 30px 5px rgba(110, 110, 110, 0.8);
 }
 
-.player-img img.active{
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s;
-    opacity: 1;
+.player-img img.active {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  opacity: 1;
 }
 
-h2{
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500;
-    margin: 10px 0 0;
+h2 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0 0;
 }
 
-h3{
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    margin: 10px 0 0;
+h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0 0;
 }
 
-.player-progress{
-    background-color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 40px 20px 35px;
-    height: 6px;
-    width: 90%;
+.player-progress {
+  background-color: #acacac;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px 35px;
+  height: 6px;
+  width: 90%;
 }
 
-.progress{
-    background-color: #212121;
-    border-radius: 5px;
-    height: 100%;
-    width: 0%;
-    transition: width 0.1s linear;
+.progress {
+  background-color: #9dff42;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
 }
 
-.music-duration{
-    position: relative;
-    top: -25px;
-    display: flex;
-    justify-content: space-between;
+.music-duration {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.player-controls{
-    position: relative;
-    top: -15px;
-    left: 120px;
-    width: 200px;
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
 }
 
-.fa-solid{
-    font-size: 30px;
-    color: #302d2d;
-    margin-right: 30px;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.3s ease;
+.fa-solid {
+  font-size: 30px;
+  color: #929191;
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
 }
 
-.fa-solid:hover{
-    filter: brightness(40%);
+.fa-solid:hover {
+  filter: brightness(40%);
 }
 
-.play-button{
-    font-size: 44px;
-    position: relative;
-    top: 3px;
+.play-button {
+  font-size: 44px;
+  position: relative;
+  top: 3px;
+}
+
+/* Style for the volume control element */
+.custom-range {
+  -webkit-appearance: none;
+  width: 75%;
+  margin-top: 10px;
+  background: none;
+}
+
+/* Style for the track of the volume control */
+.custom-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: #cccccc;
+  border-radius: 10px;
+}
+
+/* Style for the thumb (slider knob) */
+.custom-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: rgba(98, 255, 106, 0.829); /* White transparent color (adjust the alpha value as needed) */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Additional styling for the thumb when active (optional) */
+.custom-range::-webkit-slider-thumb:active {
+  background: #76ff36; /* Change the color when the thumb is active (being dragged) */
 }
